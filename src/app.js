@@ -1,6 +1,6 @@
 $(function(){
     var socket = io();
-    var move = { left:false, right:false, up:false, down:false };
+    var move = { forward:false, right:false, downward:false, left:false };
     
     $('div').on('touchstart', e => {
         e.preventDefault();
@@ -14,5 +14,5 @@ $(function(){
         $('#' + e.target.id).css('backgroundColor', '#00818a');
     });
 
-    //setInterval(() => socket.emit('moveWeb', move), 1000 / 60);
+    setInterval(() => socket.emit('moveWeb', move), 1000 / 60);
 });
