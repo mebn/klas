@@ -3,7 +3,7 @@ Styr en robot över wifi
 
 ## Innan du börjar
 
-Gör raspberry pi till en access point
+Gör raspberry pi till en anslutningspunkt (access point)
 
 https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
