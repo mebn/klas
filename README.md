@@ -21,6 +21,10 @@ Installera pigpio
 
 `sudo apt-get install pigpio`
 
+`npm i pigpio`
+
+Om det inte går, kör
+
 `sudo npm install --unsafe-perm pigpio`
 
 Installera node_modules
