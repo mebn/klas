@@ -10,47 +10,46 @@ const io = require('socket.io')(server);
 io.on('connection', socket => {
     /* uncomment for web app */
     /*
+    // webApp
     socket.on('moveWeb', move => {
-        if(move.forward) moveX('forward');
-        else if(move.backward) moveX('backward');
+        if(move.forward) direction('forward');
+        else if(move.backward) direction('backward');
         else stop('y');
 
-        if(move.left) moveY('left');
-        else if(move.right) moveY('right');
+        if(move.left) direction('left');
+        else if(move.right) direction('right');
         else stop('x');
     });
     */
     // klasApp (react native)
     socket.on('moveRN', move => {
-        if(move.forward) moveX('forward');
-        else if(move.backward) moveX('backward');
+        if(move.forward) direction('forward');
+        else if(move.backward) direction('backward');
         else stop('y');
 
-        if(move.left) moveY('left');
-        else if(move.right) moveY('right');
+        if(move.left) direction('left');
+        else if(move.right) direction('right');
         else stop('x');
     });
 });
 
-// forward and backward
-const moveX = direction => {
+// forward, backward, left, right
+const direction = direction => {
     if(direction === 'forward'){
-        console.log('forward');
-    }else if(direction === 'backward'){
-        console.log('backward');
+        // kod
+    }
+    else if(direction === 'backward'){
+        // kod
+    }
+    else if(direction === 'left'){
+        // kod
+    }
+    else if(direction === 'right'){
+        // kod
     }
 };
 
-// left and right
-const moveY = direction => {
-    if(direction === 'left'){
-        console.log('left');
-    }else if(direction === 'right'){
-        console.log('right');
-    }
-};
-
-// holds no buttons / reset
+// reset the motors when no button is pressed
 const stop = direction => {
     if(direction === 'y'){
         console.log('y');
