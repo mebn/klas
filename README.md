@@ -7,6 +7,8 @@ Gör raspberry pi till en anslutningspunkt (access point)
 
 https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
+Se till att den nya ip addresen är `10.0.0.1`
+
 ### Installera några saker
 
 Senaste versionen av node js
