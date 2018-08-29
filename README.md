@@ -17,6 +17,10 @@ Senaste versionen av node js
 
 Eller en specifik version av node js https://github.com/sdesalas/node-pi-zero
 
+Installera node_modules
+
+`npm install`
+
 Installera pigpio
 
 `sudo apt-get install pigpio`
@@ -26,10 +30,6 @@ Installera pigpio
 Om det inte går, kör
 
 `sudo npm install --unsafe-perm pigpio`
-
-Installera node_modules
-
-`npm install`
 
 ## Starta servern
 
