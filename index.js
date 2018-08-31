@@ -9,8 +9,8 @@ app.use(express.static('src'));
 const io = require('socket.io')(server);
 io.on('connection', socket => {
     /* uncomment for web app */
-    /*
     // webApp
+    /*
     socket.on('moveWeb', move => {
         if(move.forward) direction('forward');
         else if(move.backward) direction('backward');
@@ -22,6 +22,7 @@ io.on('connection', socket => {
     });
     */
     // klasApp (react native)
+    /*
     socket.on('moveRN', move => {
         if(move.forward) direction('forward');
         else if(move.backward) direction('backward');
@@ -31,6 +32,7 @@ io.on('connection', socket => {
         else if(move.right) direction('right');
         else stop('x');
     });
+    */
 });
 
 // forward, backward, left, right

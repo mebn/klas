@@ -16,5 +16,12 @@ $(function(){
         $('#' + e.target.id).css('backgroundColor', '#00818a');
     });
 
+    // when you cancel
+    $('div').on('touchcancel', e => {
+        e.preventDefault();
+        move[e.target.id] = false;
+        $('#' + e.target.id).css('backgroundColor', '#00818a');
+    });
+
     setInterval(() => socket.emit('moveWeb', move), 1000 / 60);
 });
