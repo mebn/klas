@@ -3,14 +3,11 @@ const app = express();
 const server = require('http').Server(app);
 
 const PORT = process.env.PORT || 8080;
-/* uncomment for web app */
 app.use(express.static('src'));
 
 const io = require('socket.io')(server);
 io.on('connection', socket => {
-    /* uncomment for web app */
     // webApp
-    /*
     socket.on('moveWeb', move => {
         if(move.forward) direction('forward');
         else if(move.backward) direction('backward');
@@ -20,7 +17,6 @@ io.on('connection', socket => {
         else if(move.right) direction('right');
         else stop('x');
     });
-    */
     // klasApp (react native)
     /*
     socket.on('moveRN', move => {
@@ -38,16 +34,16 @@ io.on('connection', socket => {
 // forward, backward, left, right
 const direction = direction => {
     if(direction === 'forward'){
-        // kod
+        console.log('forward');
     }
     else if(direction === 'backward'){
-        // kod
+        console.log('backward');
     }
     else if(direction === 'left'){
-        // kod
+        console.log('left');
     }
     else if(direction === 'right'){
-        // kod
+        console.log('right');
     }
 };
 
@@ -55,7 +51,8 @@ const direction = direction => {
 const stop = direction => {
     if(direction === 'y'){
         console.log('y');
-    }else if(direction === 'x'){
+    }
+    else if(direction === 'x'){
         console.log('x');
     }
 };
