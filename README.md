@@ -27,10 +27,6 @@ Installera pigpio
 
 `npm i pigpio`
 
-Om det inte går, kör
-
-`sudo npm install --unsafe-perm pigpio`
-
 ## Starta servern
 
 För att starta servern, kör
