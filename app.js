@@ -2,52 +2,46 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+
 const PORT = process.env.PORT || 8080;
-app.use(express.static('src'));
 
 // pigpio / GPIO
 
 // socket.io
 io.on('connection', socket => {
-    //socket.on('moveWeb', move => handleMove(move));
-    //socket.on('moveRN', move => handleMove(move));
-    socket.on('moveFlutter', move => handleMove(move));
+    socket.on('moveFlutter', move => {
+        if (move.forward) forward();
+        else if (move.backward) backward();
+        else stopY();
+
+        if (move.left) left();
+        else if (move.right) right();
+        else stopX();
+    });
 });
 
-const handleMove = move => {
-    if (move.forward) direction('forward');
-    else if (move.backward) direction('backward');
-    else stop('y');
-
-    if (move.left) direction('left');
-    else if (move.right) direction('right');
-    else stop('x');
+const forward = () => {
+    console.log('forward');
 };
 
-// forward, backward, left, right
-const direction = direction => {
-    if (direction === 'forward') {
-        console.log('forward');
-    }
-    else if (direction === 'backward') {
-        console.log('backward');
-    }
-    else if (direction === 'left') {
-        console.log('left');
-    }
-    else if (direction === 'right') {
-        console.log('right');
-    }
+const backward = () => {
+    console.log('backward');
 };
 
-// reset the motors when no button is pressed
-const stop = direction => {
-    if (direction === 'y') {
-        //console.log('y');
-    }
-    else if (direction === 'x') {
-        //console.log('x');
-    }
+const left = () => {
+    console.log('left');
 };
 
-server.listen(PORT, () => console.log('running'));
+const right = () => {
+    console.log('right');
+};
+
+const stopX = () => {
+    console.log('stopX');
+};
+
+const stopY = () => {
+    console.log('stopY');
+};
+
+server.listen(PORT, () => console.log('running on port', PORT));
