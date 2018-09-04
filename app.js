@@ -9,8 +9,9 @@ app.use(express.static('src'));
 
 // socket.io
 io.on('connection', socket => {
-    socket.on('moveWeb', move => handleMove(move));
-    socket.on('moveRN', move => handleMove(move));
+    //socket.on('moveWeb', move => handleMove(move));
+    //socket.on('moveRN', move => handleMove(move));
+    socket.on('event', move => handleMove(move));
 });
 
 const handleMove = move => {
