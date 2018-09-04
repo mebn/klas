@@ -11,7 +11,7 @@ app.use(express.static('src'));
 io.on('connection', socket => {
     //socket.on('moveWeb', move => handleMove(move));
     //socket.on('moveRN', move => handleMove(move));
-    socket.on('event', move => handleMove(move));
+    socket.on('moveFlutter', move => handleMove(move));
 });
 
 const handleMove = move => {
