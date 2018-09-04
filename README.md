@@ -31,4 +31,4 @@ Installera pigpio
 
 För att starta servern, kör
 
-`node index`
+`node app`
