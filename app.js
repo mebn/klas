@@ -1,11 +1,8 @@
-const express = require('express');
-const app = express();
+const app = require('express')();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 const PORT = process.env.PORT || 8080;
-
-// pigpio / GPIO
 
 // socket.io
 io.on('connection', socket => {
@@ -20,28 +17,54 @@ io.on('connection', socket => {
     });
 });
 
+/*
+// pigpio / GPIO
+const Gpio = require('pigpio').Gpio;
+cosnt pwma = new Gpio(4, {mode:Gpio.OUTPUT});
+cosnt ain1 = new Gpio(18, {mode:Gpio.OUTPUT});
+cosnt ain2 = new Gpio(17, {mode:Gpio.OUTPUT});
+cosnt stby = new Gpio(27, {mode:Gpio.OUTPUT});
+cosnt pwmb = new Gpio(24, {mode:Gpio.OUTPUT});
+cosnt bin1 = new Gpio(22, {mode:Gpio.OUTPUT});
+cosnt bin2 = new Gpio(23, {mode:Gpio.OUTPUT});
+
+stby.digitalWrite(1);
+
 const forward = () => {
-    console.log('forward');
+    pwma.pwmWrite(255);
+    ain1.digitalWrite(1);
+    ain2.digitalWrite(0);
 };
 
 const backward = () => {
-    console.log('backward');
+    pwma.pwmWrite(255);
+    ain1.digitalWrite(0);
+    ain2.digitalWrite(1);
 };
 
 const left = () => {
-    console.log('left');
+    pwmb.pwmWrite(255);
+    bin1.digitalWrite(1);
+    bin2.digitalWrite(0);
 };
 
 const right = () => {
-    console.log('right');
+    pwmb.pwmWrite(255);
+    bin1.digitalWrite(0);
+    bin2.digitalWrite(1);
 };
 
 const stopX = () => {
-    console.log('stopX');
+    pwmb.pwmWrite(0);
+    bin1.digitalWrite(0);
+    bin2.digitalWrite(0);
 };
 
 const stopY = () => {
-    console.log('stopY');
+    pwma.pwmWrite(0);
+    ain1.digitalWrite(0);
+    ain2.digitalWrite(0);
 };
+*/
 
 server.listen(PORT, () => console.log('running on port', PORT));
