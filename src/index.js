@@ -5,13 +5,13 @@ $(function () {
     const handleTouchStart = e => {
         e.preventDefault();
         move[e.target.id] = true;
-        e.target.style.background = '#404b69';
+        e.target.style.background = '#252526';
     };
 
     const handleTouchEnd = e => {
         e.preventDefault();
         move[e.target.id] = false;
-        e.target.style.background = '#00818a';
+        e.target.style.background = '#37373d';
     };
 
     $('div').on('touchstart', handleTouchStart);

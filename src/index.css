@@ -1,11 +1,11 @@
 body{
     margin:0;
     padding: 0;
-    background: #283149;
+    background: #1e1e1e;
     overflow: hidden;
 }
 div{
-    background: #00818a;
+    background: #37373d;
     width: 100px;
     height: 100px;
     border-radius: 50px;
