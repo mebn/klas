@@ -18,6 +18,7 @@ module.exports = {
         ain1.digitalWrite(1);
         ain2.digitalWrite(0);
         */
+       console.log('forward');
     },
     backward() {
         /*
@@ -25,6 +26,7 @@ module.exports = {
         ain1.digitalWrite(0);
         ain2.digitalWrite(1);
         */
+       console.log('backward');
     },
     left() {
         /*
@@ -32,6 +34,7 @@ module.exports = {
         bin1.digitalWrite(1);
         bin2.digitalWrite(0);
         */
+       console.log('left');
     },
     right() {
         /*
@@ -39,6 +42,7 @@ module.exports = {
         bin1.digitalWrite(0);
         bin2.digitalWrite(1);
         */
+       console.log('right');
     },
     stopY() {
         /*
