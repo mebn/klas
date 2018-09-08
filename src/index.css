@@ -30,8 +30,8 @@ div{
 }
 /* Landscape */
 @media screen and (orientation:landscape) {
-    #left{ right: 30px; bottom: 30px; }
-    #right{ right: 160px; bottom: 30px; }
+    #left{ right: 160px; bottom: 30px; }
+    #right{ right: 30px; bottom: 30px; }
     #forward{ left: 30px; bottom: 30px; }
     #backward{ left: 160px; bottom: 30px; }
 }

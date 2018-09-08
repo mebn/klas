@@ -1,6 +1,6 @@
 $(function () {
     const socket = io();
-    const move = { forward: false, right: false, downward: false, left: false };
+    const move = { forward: false, right: false, backward: false, left: false };
 
     const handleTouchStart = e => {
         e.preventDefault();
