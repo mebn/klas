@@ -9,6 +9,12 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
 Se till att den nya ip addresen är `10.0.0.1`
 
+`sudo nano /etc/rc.local`
+
+Lägg till `cd /home/pi/ && sudo nano app.js` innan `Exit 0`
+
+`sudo reboot`
+
 ### Installera några saker
 
 Senaste versionen av node js
