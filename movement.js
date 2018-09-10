@@ -1,61 +1,33 @@
-/*
-const Gpio = require('pigpio').Gpio;
-cosnt pwma = new Gpio(4, {mode:Gpio.OUTPUT});
-cosnt ain1 = new Gpio(18, {mode:Gpio.OUTPUT});
-cosnt ain2 = new Gpio(17, {mode:Gpio.OUTPUT});
-cosnt stby = new Gpio(27, {mode:Gpio.OUTPUT});
-cosnt pwmb = new Gpio(24, {mode:Gpio.OUTPUT});
-cosnt bin1 = new Gpio(22, {mode:Gpio.OUTPUT});
-cosnt bin2 = new Gpio(23, {mode:Gpio.OUTPUT});
 
-stby.digitalWrite(1);
-*/
+const Gpio = require('pigpio').Gpio;
+const a1 = new Gpio(10, {mode:Gpio.OUTPUT});
+const a2 = new Gpio(9, {mode:Gpio.OUTPUT});
+const b1 = new Gpio(7, {mode:Gpio.OUTPUT});
+const b2 = new Gpio(8, {mode:Gpio.OUTPUT});
 
 module.exports = {
-    forward() {
-        /*
-        pwma.pwmWrite(255);
-        ain1.digitalWrite(1);
-        ain2.digitalWrite(0);
-        */
-       console.log('forward');
+    forward(){
+	a1.digitalWrite(1);
+	b2.digitalWrite(1);
     },
     backward() {
-        /*
-        pwma.pwmWrite(255);
-        ain1.digitalWrite(0);
-        ain2.digitalWrite(1);
-        */
-       console.log('backward');
+	a2.digitalWrite(1);
+	b1.digitalWrite(1);
     },
     left() {
-        /*
-        pwmb.pwmWrite(255);
-        bin1.digitalWrite(1);
-        bin2.digitalWrite(0);
-        */
-       console.log('left');
+	a2.digitalWrite(1);
+	b2.digitalWrite(1);
     },
     right() {
-        /*
-        pwmb.pwmWrite(255);
-        bin1.digitalWrite(0);
-        bin2.digitalWrite(1);
-        */
-       console.log('right');
+	a1.digitalWrite(1);
+	b1.digitalWrite(1);
     },
     stopY() {
-        /*
-        pwma.pwmWrite(0);
-        ain1.digitalWrite(0);
-        ain2.digitalWrite(0);
-        */
+	a1.digitalWrite(0);
+	a2.digitalWrite(0);
+	b1.digitalWrite(0);
+	b2.digitalWrite(0);
     },
     stopX() {
-        /*
-        pwmb.pwmWrite(0);
-        bin1.digitalWrite(0);
-        bin2.digitalWrite(0);
-        */
     }
 };
