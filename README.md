@@ -3,29 +3,37 @@ Styr en robot över wifi
 
 ## Innan du börjar
 
-Följ denna guiden: https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
+Följ denna guiden:
 
-Sätt den nya ip addressen till `10.0.0.1`
+https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
-Gör dessa kommandon om du vill att servern ska starta automatiskt
+Sätt den nya ip addressen till:
+
+`10.0.0.1`
+
+### Gör dessa kommandon om du vill att servern ska starta automatiskt
 
 `sudo nano /etc/rc.local`
 
-Lägg till `cd /home/pi/ && sudo nano app` innan `Exit 0`
+Innan `Exit 0`, lägg till:
+
+`cd /home/pi/ && sudo nano app`
+
+Starta om:
 
 `sudo reboot`
 
 ### Installation
 
-Senaste versionen av node
+Senaste versionen av node:
 
 `wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v.last.sh | bash` 
 
-Pigpio
+Pigpio:
 
 `sudo apt-get install pigpio`
 
-Node moduler
+Node moduler:
 
 `npm install`
 
