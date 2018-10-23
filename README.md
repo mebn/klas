@@ -16,11 +16,11 @@ Node moduler:
 
 `npm i`
 
-## Anslutningspunkt (access point)
+### Anslutningspunkt (access point)
 
 Om din raspberry pi inte har ett ethernet port, se till att installera allt innan du gör dessa steg.
 
-Följ denna guiden:
+Följ denna guide:
 
 https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
