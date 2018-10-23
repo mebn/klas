@@ -2,6 +2,10 @@
 
 Styr en robot över wifi.
 
+## Information
+
+Gymnasiearbete.
+
 ### Installation
 
 Senaste versionen av node:
