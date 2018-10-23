@@ -1,27 +1,6 @@
 # klas
-Styr en robot över wifi
 
-## Innan du börjar
-
-Följ denna guiden:
-
-https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
-
-Sätt den nya ip addressen till:
-
-`10.0.0.1`
-
-### Gör dessa kommandon om du vill att servern ska starta automatiskt
-
-`sudo nano /etc/rc.local`
-
-Innan `Exit 0`, lägg till:
-
-`cd /home/pi/ && sudo nano app`
-
-Starta om:
-
-`sudo reboot`
+Styr en robot över wifi.
 
 ### Installation
 
@@ -35,8 +14,36 @@ Pigpio:
 
 Node moduler:
 
-`npm install`
+`npm i`
 
-## Starta servern
+## Anslutningspunkt (access point)
 
-`node app`
+Om din raspberry pi inte har ett ethernet port, se till att installera allt innan du gör dessa steg.
+
+Följ denna guiden:
+
+https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
+
+Sätt den nya ip addressen till:
+
+`10.0.0.1`
+
+### Starta servern automatiskt
+
+Gå till rc.local:
+
+`sudo nano /etc/rc.local`
+
+Innan `Exit 0`, lägg till:
+
+`cd /home/pi/klas && sudo node app`
+
+Starta om:
+
+`sudo reboot`
+
+Servern kommer nu automatiskt att starta utan att du behöver gå in och starta den.
+
+## Starta servern manuellt
+
+`sudo node app`
