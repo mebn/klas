@@ -48,6 +48,6 @@ Starta om:
 
 Servern kommer nu automatiskt att starta utan att du behöver gå in och starta den.
 
-## Starta servern manuellt
+### Starta servern manuellt
 
 `sudo node app`
