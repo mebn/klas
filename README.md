@@ -40,7 +40,7 @@ Gå till rc.local:
 
 Innan `Exit 0`, lägg till:
 
-`cd /home/pi/klas && sudo node app`
+`cd /home/pi/klas && sudo node index.js`
 
 Starta om:
 
@@ -50,4 +50,4 @@ Servern kommer nu automatiskt att starta utan att du behöver gå in och starta 
 
 ### Starta servern manuellt
 
-`sudo node app`
+`sudo node index.js`
